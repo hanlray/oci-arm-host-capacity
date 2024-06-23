@@ -43,7 +43,6 @@ jobs:
           composer update --prefer-dist --no-progress
       - name: Run script
         run: |
-          #vendor/bin/phpunit --color tests/
           php index.php
         env:
           OCI_REGION: ${{ secrets.OCI_REGION }}
