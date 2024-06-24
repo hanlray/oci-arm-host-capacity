@@ -15,9 +15,9 @@ use Hitrov\OciConfig;
 use Hitrov\TooManyRequestsWaiter;
 
 $envFilename = empty($argv[1]) ? '.env' : $argv[1];
-echo $envFilename;
 $dotenv = Dotenv::createUnsafeImmutable(__DIR__, $envFilename);
 $dotenv->safeLoad();
+echo "OCI_REGION:" + getenv('OCI_REGION');
 
 /*
  * No need to modify any value in this file anymore!
