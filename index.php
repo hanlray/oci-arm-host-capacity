@@ -17,7 +17,7 @@ use Hitrov\TooManyRequestsWaiter;
 $envFilename = empty($argv[1]) ? '.env' : $argv[1];
 $dotenv = Dotenv::createUnsafeImmutable(__DIR__, $envFilename);
 $dotenv->safeLoad();
-echo "LANG:", getenv('LANG');
+echo "TEST:", getenv('TEST');
 
 /*
  * No need to modify any value in this file anymore!
